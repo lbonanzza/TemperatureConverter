@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SunOne.png" translatesAutoresizingMaskIntoConstraints="NO" id="fXW-qu-SGZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kA5-t4-ww4">
+                                <rect key="frame" x="53.5" y="37" width="307" height="35"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-cj-ijs">
+                                <rect key="frame" x="162.5" y="126" width="89" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0P-Js-8Ce">
+                                <rect key="frame" x="167" y="263" width="80.5" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4q6-sO-xZX">
+                                <rect key="frame" x="92" y="212" width="230" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="6w8-PR-3Vd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="F1q-v8-Ah1"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i0P-Js-8Ce" firstAttribute="centerX" secondItem="4q6-sO-xZX" secondAttribute="centerX" id="3nw-el-CiW"/>
+                            <constraint firstItem="kA5-t4-ww4" firstAttribute="centerX" secondItem="fXW-qu-SGZ" secondAttribute="centerX" id="A9D-ql-CD3"/>
+                            <constraint firstItem="fXW-qu-SGZ" firstAttribute="top" secondItem="kA5-t4-ww4" secondAttribute="bottom" constant="-72" id="Gxn-nH-bkH"/>
+                            <constraint firstItem="cYl-cj-ijs" firstAttribute="top" secondItem="kA5-t4-ww4" secondAttribute="bottom" constant="54" id="Hnu-jF-fwJ"/>
+                            <constraint firstItem="4q6-sO-xZX" firstAttribute="firstBaseline" secondItem="cYl-cj-ijs" secondAttribute="baseline" constant="34.5" symbolType="layoutAnchor" id="IkE-a7-u0P"/>
+                            <constraint firstItem="fXW-qu-SGZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Knb-36-JEg"/>
+                            <constraint firstItem="cYl-cj-ijs" firstAttribute="centerX" secondItem="fXW-qu-SGZ" secondAttribute="centerX" id="MXO-7g-eoT"/>
+                            <constraint firstItem="fXW-qu-SGZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cnT-8u-LOO"/>
+                            <constraint firstItem="4q6-sO-xZX" firstAttribute="centerX" secondItem="fXW-qu-SGZ" secondAttribute="centerX" id="d5M-p7-tH0"/>
+                            <constraint firstItem="fXW-qu-SGZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eF5-OF-SJb"/>
+                            <constraint firstItem="i0P-Js-8Ce" firstAttribute="firstBaseline" secondItem="4q6-sO-xZX" secondAttribute="baseline" constant="72.5" symbolType="layoutAnchor" id="fJK-Lm-3TG"/>
+                            <constraint firstItem="i0P-Js-8Ce" firstAttribute="centerX" secondItem="fXW-qu-SGZ" secondAttribute="centerX" id="hWy-lX-LBU"/>
+                            <constraint firstItem="fXW-qu-SGZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o3U-dT-AA2"/>
+                            <constraint firstItem="4q6-sO-xZX" firstAttribute="centerX" secondItem="fXW-qu-SGZ" secondAttribute="centerX" id="r5u-0M-snw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gxn-nH-bkH"/>
+                                <exclude reference="A9D-ql-CD3"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Gxn-nH-bkH"/>
+                                <include reference="A9D-ql-CD3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Gxn-nH-bkH"/>
+                                <include reference="A9D-ql-CD3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLable" destination="cYl-cj-ijs" id="RxP-2j-7hD"/>
+                        <outlet property="fahrenheitLable" destination="i0P-Js-8Ce" id="rYa-Yf-SX0"/>
+                        <outlet property="slider" destination="4q6-sO-xZX" id="Jul-M7-ZK8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SunOne.png" width="180" height="320.16000366210938"/>
+    </resources>
+</document>
